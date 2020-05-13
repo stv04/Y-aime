@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="lib/style.css">
+  <title>Y'aime</title>
+</head>
+<body>
+	<header>
+		<h1 style="justify-content: flex-start; width: 40%">Y'aime</h1>
+		<div id="ingreso">
+			<input type="email" name="ingreso-email" id="ingreso-email" placeholder="ingresa tu correo" class="input">
+			<input type="password" name="clave" id="ingreso-clave" placeholder="ingresa tu clave" class="input">
+		</div>
+		<div class="botones"><button id='acceder'>Acceder</button>
+		<button id='registrarse' class="btn-orange">Registrarse</button></div><br>
+		<p class="alert msj-ingreso"></p>
+		<p id='restablecer-clave' class="alert link"></p>
+	</header>
+	<article>
+		<h1>BIENVENIDO</h1>
+		<p>Ahora es más fácil que tus gustos te unan a otras personas, todo esto a través de una app que te conecta con gente alrededor del mundo que comparten tus gustos.</p>
+		<p><storng>Y'aime</storng> es una aplicación que te conecta con personas que le gustan las mismas cosas que a ti, no necesitas seguir a nadie, ni buscar amigos, ya que la aplicación lo hace por ti, para ello, solo debes escoger al menos uno de los gustos disponibles y ¡listo! Más adelante los puedes editar si deseas.</p>
+		<p>Ahora es tiempo de compartir con tus Y'aimers y vivir esta fantástica experiencia.</p>
+	</article>
+	<section id="seccion-de-registro">
+		<span id="close">&times;</span>
+		<h3>Ingresa tus datos a Continuación</h3>
+		<input type="text" name="nombre" placeholder="Nombre" id="nombre" class="input input-corto">
+		<input type="text" name="apellido" placeholder="Apellido" id="apellido" class="input input-corto"><br>
+		<p class="alert msj-registro">Por favor ingresa algunos de los campos superiores</p>
+		<input type="password" name="clave" placeholder="Clave" id="clave" required="" class="input input-corto">
+		<input type="password" name="clave" placeholder="Confirmar Clave" id="clave-confirm" required="" class="input input-corto"><br>
+		<p class="alert msj-registro">Procura insertar como mínimo 6 carácteres</p>
+		<p class="alert msj-registro">Las claves ingresadas no coinciden</p>
+
+		<input type="email" name="email" placeholder="correo electronico" id="email" required="" pattern=".+@.+\..+" class="input input-largo">
+		<h4>EEscoje como maximo tres cosas que te gusten</h4>
+		<div id="nuevos-gustos" class="gustos">
+			<label><input type='checkbox' id='musica' value='Musica'>Musica</label>
+			<label><input type='checkbox' id='moda' value='Moda'>Moda</label>
+			<label><input type='checkbox' id='comida' value='Comida'>Comida</label>
+			<label><input type='checkbox' id='marketing' value='Marketing'>Marketing</label>
+			<label><input type='checkbox' id='autos-motos' value='Autos y Motos'>Autos y Motos</label>
+			<label><input type='checkbox' id='arte' value='Arte'>Arte</label>
+			<label><input type='checkbox' id='belleza' value='Belleza'>Belleza</label>
+			<label><input type='checkbox' id='tecnologia' value='Tecnologia'>Tecnologia</label>
+			<label><input type='checkbox' id='deportes' value='Deportes'>Deporte</label>
+			<label><input type='checkbox' id='literatura' value='Literatura'>Literatura</label>
+			<label><input type='checkbox' id='hogar' value='Hogar'>Hogar</label>
+			<label><input type='checkbox' id='cine' value='Cine'>Cine</label>
+		</div>
+		<button id="registrar" disabled="">Registrar</button>
+		<button id="google">O ingresa con Google</button>
+		<p class="alert msj-registro"></p>
+	</section>
+	<section id="seccion-emergente" style="display: none">
+		<span style="float: right;" id="cerrar">&times;</span>
+	</section>
+	
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCd74OzNod35CzVsxnTG3ZOmfMs3ioAumI",
+    authDomain: "social-media-b8878.firebaseapp.com",
+    databaseURL: "https://social-media-b8878.firebaseio.com",
+    projectId: "social-media-b8878",
+    storageBucket: "social-media-b8878.appspot.com",
+    messagingSenderId: "471989981083",
+    appId: "1:471989981083:web:0ff56a5cabc4ff68fd9b3e",
+    measurementId: "G-QN5SRXSBJH"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  var db = firebase.firestore();
+  var storage = firebase.storage();
+</script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

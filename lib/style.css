@@ -1,0 +1,247 @@
+@font-face{
+	font-family: 'bienvenido';
+	src: url('Visual.ttf')
+	format('truetype');
+	font-stretch: extra-expanded;
+}
+@font-face{
+	font-family: 'todo';
+	src: url('Comformable.otf')
+	format('opentype');
+	unicode-range: 'UTF-8';
+
+}
+body{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	align-content: center;
+	max-width: 700px;
+	margin: auto;
+	font-family: 'todo';
+	letter-spacing: 2px;
+	font-size: 1.2em;
+}
+
+/* Estilos que tienen que ver con el header */
+header {
+	background-color: rgb(12, 240, 0);
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	min-width: 90%;
+	align-self: center;
+	margin: 10px;
+}
+
+.perfil {
+    display: flex;
+    width: 60%;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+header h1 {
+	width: 40%;
+	margin: 5px 0px;
+	padding: 0px;
+	cursor: pointer;
+	color: white;
+	letter-spacing: 10px;
+	font-family: 'bienvenido';
+	font-size: 3em;
+	text-shadow: 1px 1px 2px black;
+}
+
+header h2 {
+	margin-right: 40px;
+}
+
+ #ingreso {
+ 	display: flex;
+ 	flex-flow: wrap;
+ 	max-width: 60%;
+ 	min-width: 30%;
+ 	justify-content: space-around;
+ }
+
+
+/* Configuracion de texto principal */
+article{
+	margin: 10px;
+	width: 65%;
+    min-width: 300px;
+    text-align: justify
+}
+article h1 {
+	transform: rotateZ(-90deg);
+	font-family: 'bienvenido';
+	width: 0px;
+	height: 0px;
+	position: relative;
+	top: 60%;
+	letter-spacing: 15px;
+	color: rgb(12, 240, 0);
+	text-shadow: 1px 1px 2px black;
+	font-size: 2em;
+}
+
+article p {
+	margin-left: 70px;
+    margin-top: 0px;
+    position: relative;
+    top: -70px;
+}
+
+
+/*Configuracion de Ventana de registro */
+#seccion-de-registro, #seccion-emergente{
+	display: none;
+	position: fixed;
+	width: 90%;
+	background-image: radial-gradient(lightgray, white);
+	border-radius: 20px;
+	z-index: 1;
+	margin: auto;
+	padding: 10px;
+	max-height: 85%;
+	overflow-y: auto;
+
+}
+
+#seccion-de-registro h3 {
+	margin: 10px;
+}
+
+.gustos {
+	width: 90%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: auto;
+	margin-bottom: 5px;
+}
+.gustos label {
+	display: inline-block;
+	width: 30%;
+	max-width: 48%;
+	text-align: left;
+	margin: 2px 0px;
+}
+
+span {
+	float: right;
+	margin: 5px;
+	padding: 2px;
+	cursor: pointer;
+	border: groove 2px;
+	border-radius: 20px;
+	align-self: flex-end;
+}
+
+
+/* ventana de usuario */
+textarea {
+	width: 90%;
+	margin: 5px;
+	padding: 10px;
+	height: 90px;
+	border-radius: 10px;
+}
+
+/*    publicaciones  */
+#posters {
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.post{
+	width: 90%;
+	display: flex;
+	flex-flow: column wrap;
+	margin-top: 20px;
+	border: solid 1px lightgreen;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.post div {
+	display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+}
+
+.post img {
+    max-width: 300px;
+    max-height: 400px;
+    display: inline-flex;
+    align-self: center;
+    margin: 10px;
+}
+
+h3 em {
+	font-size: 0.5em
+}
+
+.perfil h3 {
+	margin-right: 20px;
+}
+
+/* 							***INPUTS*** 								*/
+.input {
+	width: 130px;
+	height: 25px;
+	border: solid 1px lightgreen;
+	border-radius: 5px;
+	margin: 10px;
+	font-family: 'todo';
+}
+
+.input-corto {
+	width: 40%;
+}
+
+.input-largo {
+	width: 90%;
+}
+
+
+
+
+/* 							***BOTONES***   					 */	
+/* Botones Estandar */
+button {
+	font-size: medium;
+	padding: 5px;
+	border-radius: 10px;
+	margin:5px 10px;
+	background-image: linear-gradient(rgb(12, 240, 0), white);
+	border: lightgreen solid 1px;
+	max-width: 150px;
+	font-family: 'todo';
+}
+
+.btn-orange {
+	background-image: linear-gradient(orange,white);
+}
+
+button:disabled {
+	cursor: not-allowed;
+}
+
+/*      					***INFORMACIONES***      			*/
+.alert {
+	color: red;
+	display: none;
+	margin: 5px;
+}
+
+.link {
+	color: blue;
+}
+
+
+
