@@ -136,6 +136,7 @@ article p {
 	max-width: 48%;
 	text-align: left;
 	margin: 2px 0px;
+	min-width: 120px;
 }
 
 span {
